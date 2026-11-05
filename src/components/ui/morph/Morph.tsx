@@ -1,9 +1,10 @@
 'use client'
 
-import { interpolate } from "flubber"
+
 import { useEffect, useRef, useState } from "react"
 import { shape1, shape2, shape3 } from "./paths"
 import { animate, useMotionValue, useTransform, motion } from "framer-motion"
+import { interpolate } from "gsap"
 
 export default function Morph() {
     const [active, setActive] = useState(false)
@@ -29,7 +30,7 @@ function SvgMorph(props: any) {
     const progress = useMotionValue(0)  
     const getIndex = paths.map((_: any, i: any) => i) //благодаря этому, фигур может быть больше
 
-    const path = useTransform(progress, getIndex, paths, {
+    const path: any = useTransform(progress, getIndex, paths, {
         mixer: (a, b) => interpolate(a, b)
     }) //тут уже возвращается фигура в зависимости от progress, тк он выбирает какие тут будут соседние фигуры при переходе
 

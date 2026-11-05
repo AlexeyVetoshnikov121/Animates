@@ -7,7 +7,7 @@ import { motion } from "framer-motion"
 
 export default function Home() {
     const slide = useRef(null)
-    const { scrollYProgress } = useScroll({
+    const { scrollYProgress }: any = useScroll({
         target: slide,
         offset: ['start end', 'end start']
     })

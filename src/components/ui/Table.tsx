@@ -9,7 +9,7 @@ export default function Table() {
 
     const [isActive, setIsActive] = useState(false)
 
-    const variant = {
+    const variant: any = {
         open: {
             width: 400,
             height: 650,

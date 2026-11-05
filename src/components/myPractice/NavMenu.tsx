@@ -163,10 +163,10 @@ export default function NavMenu() {
                     
                 >
                     <motion.span className="absolute bg-black w-[60%] h-[1px] translate-y-[-2px]"
-                        {...anim(rotate)}
+                        {...anim(rotate, 0)}
                     />
                     <motion.span className="absolute translate-y-[5px] bg-black w-[60%] h-[1px] " 
-                        {...anim(rotateTwo)}
+                        {...anim(rotateTwo, 0)}
                     />
                 </div>
                 <motion.h1 className="absolute translate-x-[20px] top-[40px] uppercase"
