@@ -1,0 +1,96 @@
+.menu {
+
+    &:hover {
+        p {
+            &:first-child {
+                transform: translateY(-10px);
+                opacity: 0;
+            }
+
+            &:last-child {
+                transform: translateY(0%);
+                opacity: 1;
+            }
+        }
+    }
+    p {
+        transition: all 0.3s;
+        transform: rotateX(0deg);
+
+        &:last-child {
+            transform: translateY(50%);
+            opacity: 0;
+        }
+    }
+}
+
+.project-c {
+    transition-duration: 0.3s;
+}
+
+.project-c h1, p {
+    transition-duration: 0.3s;
+}
+
+.project-c:hover {
+    border-top-color: rgb(247, 244, 244);
+    h1, p {
+        opacity: 0.4
+    }
+    h1 {
+        transform: translateX(10px);
+    }
+    p {
+        transform: translateX(-10px);
+    }
+}
+
+.container-box {
+    transition: top 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+//работа с картинками и перпективой
+
+.image {
+    &:nth-child(1) {
+        transform: translateX(300px) translateY(100px);
+    }
+     &:nth-child(2) {
+        transform: translateX(200px) translateY(200px);
+    }
+     &:nth-child(3) {
+        transform: translateX(800px) translateY(100px);
+    }
+}
+
+.image1 {
+    &:nth-child(1) {
+        transform: translateX(1600px) translateY(100px);
+    }
+     &:nth-child(2) {
+        transform: translateX(1400px) translateY(250px);
+    }
+     &:nth-child(3) {
+        transform: translateX(1000px) translateY(-600px);
+    }
+}
+
+.image2 {
+    &:nth-child(1) {
+        transform: translateX(1350px) translateY(300px);
+    }
+     &:nth-child(2) {
+        transform: translateX(800px) translateY(50px);
+    }
+     &:nth-child(3) {
+        transform: translateX(450px) translateY(0px);
+    }
+}
+
+.cont-v {
+    background-color: rgb(107, 110, 112);
+}
+
+.images-cont {
+    clip-path: polygon("0 0, 0 100%, 100% 100%, 100% 0"); //тут клип пас автоматом дорисовывает верх
+}
